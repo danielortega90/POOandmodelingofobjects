@@ -23,7 +23,12 @@ public class ArrayDos extends Array {
     public ArrayDos(Vector<Integer> num) {
         this.num = num;
     }
-
+    
+    //metodo abstracto
+    public void num() {
+      this.num = num;
+    }
+    
     //metodo  sobreescrito
     @Override
     public void rellenar() {
