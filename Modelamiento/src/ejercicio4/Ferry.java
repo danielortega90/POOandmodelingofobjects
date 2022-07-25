@@ -15,21 +15,36 @@ package ejercicio4;
 public class Ferry {
 
     public static void main(String[] args) {
-        //Creo un array de objetos de la calse vehiculos
-        Vehiculo[] vehiculo = {new Vehiculo("BMW",4, 4, 1980, "Nafta")
-                              ,new Vehiculo("Audi A4",4, 4, 2020, "Nafta")
-                              ,new Vehiculo("Camaro",2, 4, 2010, "Nafta")
-                              ,new Vehiculo("Audi A5",2, 4, 2018, "Nafta")
-                              ,new Vehiculo("Golf",4, 4, 1990, "Nafta")
-                              ,new Vehiculo("Renault",4, 4, 2001, "Nafta")
-                              ,new Vehiculo("Fiat ",5, 4, 1970, "Nafta")
-                              ,new Vehiculo("Audi A1",2, 4, 2010, "Nafta")
-                              ,new Vehiculo("Ferrari",1, 4, 2015, "Nafta")
-                              ,new Vehiculo("Fiat Uno",1, 4, 2013, "Nafta")};
+       //Creo un array de objetos de la calse vehiculos
+        Vehiculo[] vehiculo = new Vehiculo[10];
+        
+        llenarVehiculo(vehiculo);
         //Muestro el array de los objetos
         for (int i = 0; i < vehiculo.length; i++) {
             System.out.println("Lista de autos \n"+vehiculo[i]);
         }
+            
+    }
+    //metodo para Pedir datos al usuario por consola
+    public static void llenarVehiculo(Vehiculo[] vehiculo){
+         Scanner entrada = new Scanner(System.in);
+         
+         for (int i = 0;i < vehiculo.length; i++) {
+             System.out.println("Ingre Marca del auto");
+             String nom = entrada.nextLine();
+             System.out.println("Numero de Pasajeros");
+             int numPas = entrada.nextInt();
+             System.out.println("Numero de Ruedas");
+             int numR= entrada.nextInt();
+             System.out.println("Año de creacion");
+             int fechaMatri= entrada.nextInt();
+             System.out.println("Combustible que utiliza");
+             entrada.nextLine();
+             String medioDea= entrada.nextLine();
+            
+             vehiculo[i]= new Vehiculo(nom, numPas, numR, fechaMatri, medioDea);
+        }
+    }
             
     }
     
