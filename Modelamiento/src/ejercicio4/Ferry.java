@@ -30,11 +30,11 @@ public class Ferry {
          Scanner entrada = new Scanner(System.in);
          
          for (int i = 0;i < vehiculo.length; i++) {
-             System.out.println("Ingre Marca del auto");
+             System.out.println("Ingrese Marca del auto");
              String nom = entrada.nextLine();
-             System.out.println("Numero de Pasajeros");
+             System.out.println("Número de Pasajeros");
              int numPas = entrada.nextInt();
-             System.out.println("Numero de Ruedas");
+             System.out.println("Número de Ruedas");
              int numR= entrada.nextInt();
              System.out.println("Año de creacion");
              int fechaMatri= entrada.nextInt();
