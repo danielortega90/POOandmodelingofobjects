@@ -14,33 +14,35 @@ import java.util.Vector;
  */
 public abstract class Array {
       //atributos de la clase
-      Scanner entrada = new Scanner(System.in);
-      int numero;
-      boolean continuar = true;
 
-      Vector<Integer> vectorNumeros = new Vector<Integer>();
-      
-      //metodos de la clase
-    public void rellenar(){
-      do {
-        System.out.println("Por favor ingrese un número");
-        numero = entrada.nextInt();
+    Scanner entrada = new Scanner(System.in);
+    int numero;
+    boolean continuar = true;
 
-        vectorNumeros.add(numero);
+    Vector<Integer> vectorNumeros = new Vector<Integer>();
 
-        for (int i = 0; i < vectorNumeros.size(); i++) {
-          for (int j = i + 1; j < vectorNumeros.size(); j++) {
-            if (vectorNumeros.get(i) == vectorNumeros.get(j)) {
-              continuar = false;
+    //metodo abstracto
+    public abstract void num();
+    //metodos de la clase
+
+    public void rellenar() {
+        do {
+            System.out.println("Por favor ingrese un número");
+            numero = entrada.nextInt();
+
+            vectorNumeros.add(numero);
+
+            for (int i = 0; i < vectorNumeros.size(); i++) {
+                for (int j = i + 1; j < vectorNumeros.size(); j++) {
+                    if (vectorNumeros.get(i) == vectorNumeros.get(j)) {
+                        continuar = false;
+                    }
+                }
             }
-          }
-        }
 
-      } while (continuar == true);
+        } while (continuar == true);
 
-
-
-      System.out.println("El Vector es: " + vectorNumeros);
+        System.out.println("El Vector es: " + vectorNumeros);
     }
     }
 
