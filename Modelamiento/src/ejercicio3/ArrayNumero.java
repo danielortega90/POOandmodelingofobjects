@@ -46,14 +46,14 @@ public class ArrayNumero {
     }
     //metodo de  mostrar el array 
     private static void mostrar(int[] a){
-        for (int i = 0; i < 9; i++) {
+        for (int i = 0; i < a.length; i++) {
              System.out.print("["+a[i]+"] ");
         }
     }
     //metodo de rellenar un array
     private static int[] relleno(int [] num){
       
-        for (int i = 0; i < 9; i++) {
+        for (int i = 0; i < num.length; i++) {
               num[i]=(int)(Math.random()*11+1);
               
           }
@@ -100,5 +100,6 @@ public class ArrayNumero {
       quicksort(A,j+1,der);          
    return A;
 }
+   
    
 }
