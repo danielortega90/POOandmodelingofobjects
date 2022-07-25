@@ -23,8 +23,13 @@ public class ArrayTres extends Array {
     public ArrayTres(Vector<Integer> num) {
         this.num = num;
     }
-    //metodo  sobreescritos
+    //metodo abstracto
 
+    public void num() {
+        this.num = num;
+    }
+
+    //metodo  sobreescritos
     @Override
     public void rellenar() {
         num = new Vector<Integer>();
@@ -46,4 +51,5 @@ public class ArrayTres extends Array {
 
         System.out.println("El Vector es: " + vectorNumeros);
     }
+
 }
